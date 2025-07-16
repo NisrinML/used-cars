@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import CarCard from './shared/CarCard'
 import type { Car } from "@/types/car"
 import Icon from '@/ui/Icon';
+import { useRouter } from 'next/navigation';
 
 
 async function fetchUsedCars(): Promise<Car[]> {
@@ -19,6 +20,7 @@ const Home = () => {
   const [usedCars, setUsedCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+    const router = useRouter()
   useEffect(() => {
     async function loadCars() {
       try {
@@ -54,7 +56,7 @@ const Home = () => {
                   : ''
               }
             >
-              <CarCard car={car}/>
+              <CarCard car={car} onClick={() => router.push(`/home/${car?.id}`)}/>
             </article>
           ))}
         </div>

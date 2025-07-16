@@ -4,19 +4,20 @@ import type { Car } from "@/types/car"
 import Image from 'next/image'
 import Icon from '@/ui/Icon'
 import { formatPrice } from '@/utilities/functions'
-import { useRouter } from 'next/navigation'
+
 interface CarCardProps {
-    car: Car
+    car: Car,
+    onClick: () => void
 }
 
 
-const CarCard = ({ car }: CarCardProps) => {
-    const router = useRouter()
+const CarCard = ({ car ,onClick}: CarCardProps ) => {
+  
     
     const price = formatPrice(car.price)
     return (
         <section
-        onClick={() => router.push(`/home/${car?.id}`) }
+        onClick={onClick }
         className='overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:cursor-pointer bg-white border-2 border-cardBorder min-h-40 rounded-md 
     flex flex-row font-sans gap-2 p-2 md:gap-4 md:p-4
     ' >
