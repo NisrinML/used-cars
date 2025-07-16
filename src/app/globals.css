@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #3B3B3B;
     --foreground: #F4F4F4;
       --font-monovf: var(--font-geist-monovf);
   --font-vf: var(--font-geist-vf);
