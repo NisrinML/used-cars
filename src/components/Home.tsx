@@ -18,15 +18,15 @@ async function fetchUsedCars(): Promise<Car[]> {
 const Home = () => {
   const [usedCars, setUsedCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<any | null>(null);
   useEffect(() => {
     async function loadCars() {
       try {
         const cars = await fetchUsedCars();
         setUsedCars(cars);
         setLoading(false);
-      } catch (error) {
-        setError('Failed to load used cars');
+      } catch (err) {
+        setError(err);
         setLoading(false);
       }
     }
