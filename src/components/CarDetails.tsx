@@ -1,3 +1,4 @@
+"use client"
 import { Car } from '@/types/car'
 import React from 'react'
 import { stripHtmlTags } from '@/utilities/functions';
