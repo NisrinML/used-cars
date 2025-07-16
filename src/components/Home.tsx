@@ -18,7 +18,7 @@ async function fetchUsedCars(): Promise<Car[]> {
 const Home = () => {
   const [usedCars, setUsedCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<any | null>(null);
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     async function loadCars() {
       try {
@@ -26,8 +26,9 @@ const Home = () => {
         setUsedCars(cars);
         setLoading(false);
       } catch (err) {
-        setError(err);
+        setError('Failed to load used cars');
         setLoading(false);
+        console.log("Data didnot fetch becouse of: ",err);
       }
     }
     loadCars();
