@@ -1,8 +1,10 @@
+import { Car } from '@/types/car'
 import React from 'react'
+import { stripHtmlTags } from '@/utilities/functions';
 
-const CarDetails = () => {
+const CarDetails = ({ car }: { car: Car }) => {
   return (
-    <div>CarDetails</div>
+    <div className='p-8 text-lg font-sans text-foreground'>{stripHtmlTags(car.description)}</div>
   )
 }
 

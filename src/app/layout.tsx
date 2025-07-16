@@ -15,7 +15,7 @@ const geistVF = localFont({
   display: 'swap',
 });
 
-const siteTitle = 'Used Cars';
+const siteTitle = process.env.NEXT_PUBLIC_PROJECTNAME;
 const siteDescription = 'Check Certified Pre-owned, New, and Used cars on YallaMotor.';
 const safeDescription = sanitizeDescription(siteDescription);
 
@@ -54,20 +54,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="preload"
-          href="/fonts/geist-sans.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/geist-mono.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
           type="application/ld+json"

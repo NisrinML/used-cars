@@ -10,12 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        foreground: "#3B3B3B",
         contactButton: "#25d342 ",
         description: "#868686",
         title: "#FFB910",
         cardBackground: "#FFFFFF",
         cardBorder: "#E9EFF3",
+        slideImage:"#0000007a",
       },
     },
   },
