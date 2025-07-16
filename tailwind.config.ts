@@ -11,6 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        contactButton: "#25d342 ",
+        description: "#868686",
+        title: "#FFB910",
+        cardBackground: "#FFFFFF",
+        cardBorder: "#E9EFF3",
       },
     },
   },
