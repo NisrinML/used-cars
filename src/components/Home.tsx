@@ -25,7 +25,7 @@ const Home = () => {
         const cars = await fetchUsedCars();
         setUsedCars(cars);
         setLoading(false);
-      } catch (err) {
+      } catch (error) {
         setError('Failed to load used cars');
         setLoading(false);
       }
