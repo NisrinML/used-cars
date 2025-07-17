@@ -8,7 +8,7 @@ interface Vechile {
 
 const VechileHighlight = ({name,label,value}:Vechile) => {
   return (
-    <div className='flex flex-col items-center h-fit w-40 bg-background p-4'>
+    <div className='flex flex-col items-center h-fit w-32 sm:w-40 bg-background p-4'>
       <Icon name={name} w={8} h={8}/>
       <h6 className='text-[10px] text-gray-500'>{label}</h6>
       <h4 className='text-sm font-semibold text-linkColor'>{value}</h4>

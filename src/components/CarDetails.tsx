@@ -12,7 +12,7 @@ const CarDetails = ({ car }: { car: Car }) => {
   const price = formatPrice(car.price);
   const strippedDescription = stripHtmlTags(car.description);
   return (
-    <main className='m-8 p-4 h-fit font-sans w-[90%] md:w-[50%] self-center  bg-white rounded-lg flex flex-col items-center gap-4'>
+    <main className=' h-fit font-sans self-center  bg-white rounded-lg flex flex-col items-center gap-2 m-4 p-2 lg:gap-4 lg:m-8 lg:p-4  w-[90%] xl:min-w-[50%] xl:max-w-[70%] overflow-hidden'>
       <h1 className='font-semibold text-lg lg:text-2xl'>{car.title}</h1>
       <h4 className='font-semibold text-sm lg:text-lg'>{car.year} {" Model | "}{car.model}</h4>
       {/* Car Thumbnails Section */}
@@ -25,7 +25,7 @@ const CarDetails = ({ car }: { car: Car }) => {
           />
       </section>
       {/* Car Highlight Section */}
-      <section className='flex flex-col items-center gap-4 mt-4'>
+      <section className='flex flex-col items-center gap-2 mt-4 lg:gap-4 '>
         <h2 className='font-semibold text-base lg:text-xl'>Vechile Highlight</h2>
         <div className='flex flex-row justify-center gap-8'>
           <VechileHighlight name="Date" label="Model Year" value={car.year.toString()} />
@@ -33,9 +33,9 @@ const CarDetails = ({ car }: { car: Car }) => {
         </div>
       </section>
       {/* Car Details Section */}
-      <section className='flex flex-col items-center gap-4 mt-4 w-full'>
+      <section className='flex flex-col items-start pl-8 sm:pl-0 sm:items-center gap-2 mt-4 lg:gap-4 w-full'>
         <h2 className='font-semibold text-base lg:text-xl'>Car Details</h2>
-        <div className='grid grid-cols-2 gap-x-16 gap-y-4 '>
+        <div className='grid grid-cols-1 gap-y-2 md:grid-cols-2 md:gap-x-16 md:gap-y-4 '>
           <InfoContainer label="Model" value={car.model} />
           <InfoContainer label="Maker" value={car.make} />
           <InfoContainer label="Year" value={car.year} />
@@ -44,14 +44,14 @@ const CarDetails = ({ car }: { car: Car }) => {
           <InfoContainer label="Name" value={car.title} />
           <InfoContainer label="Seller" value={car.seller_name} />
           {car.whatsapp_number && <button className='text-base text-white font-semibold rounded-lg bg-contactButton 
-          flex flex-row justify-center items-center gap-4 w-[50%] p-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-95'>
+          flex flex-row justify-center items-center gap-4 w-[40%] p-1 lg:w-[50%] lg:p-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-95'>
             <Icon name="Whatsapp" w={4} h={4} />
             <h6>Whatsapp</h6>
           </button>}
         </div>
       </section>
       {/* Car Description Section */}
-      <section className='flex flex-col items-start gap-4 mt-4 w-full px-8'>
+      <section className='flex flex-col items-start gap-2 mt-4 px-8 lg:px-8 lg:gap-4 w-full '>
       <h2 className='font-semibold text-base lg:text-xl'>Car Description</h2>
        <p 
           className={`text-base font-sans text-foreground ${
