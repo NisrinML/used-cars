@@ -44,7 +44,7 @@ const CarDetails = ({ car }: { car: Car }) => {
           <InfoContainer label="Name" value={car.title} />
           <InfoContainer label="Seller" value={car.seller_name} />
           {car.whatsapp_number && <button className='text-base text-white font-semibold rounded-lg bg-contactButton 
-          flex flex-row justify-center items-center gap-4 w-[40%] p-1 lg:w-[50%] lg:p-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-95'>
+          flex flex-row justify-center items-center gap-4 w-[50%] p-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-95'>
             <Icon name="Whatsapp" w={4} h={4} />
             <h6>Whatsapp</h6>
           </button>}
