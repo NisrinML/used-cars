@@ -15,7 +15,7 @@ const CarDetails = ({ car }: { car: Car }) => {
   const strippedDescription = stripHtmlTags(car.description);
   const router = useRouter()
   return (
-    <div className='w-full h-fit flex items-center relative'>
+    <div className='w-full h-fit flex items-center justify-center relative'>
       {/* Back Button Definition */}
       <button
         onClick={() => router.back()}
