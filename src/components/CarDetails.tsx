@@ -5,17 +5,25 @@ import { formatPrice, stripHtmlTags } from '@/utilities/functions';
 import VechileHighlight from './shared/VechileHighlight';
 import InfoContainer from './shared/InfoContainer';
 import Icon from '@/ui/Icon';
+import ImageSlider from './shared/ImageSlider';
 
 const CarDetails = ({ car }: { car: Car }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const price = formatPrice(car.price);
   const strippedDescription = stripHtmlTags(car.description);
   return (
-    <main className='m-8 p-4 h-fit font-sans w-[50%] self-center  bg-white rounded-lg flex flex-col items-center gap-4'>
+    <main className='m-8 p-4 h-fit font-sans w-[90%] md:w-[50%] self-center  bg-white rounded-lg flex flex-col items-center gap-4'>
       <h1 className='font-semibold text-lg lg:text-2xl'>{car.title}</h1>
       <h4 className='font-semibold text-sm lg:text-lg'>{car.year} {" Model | "}{car.model}</h4>
       {/* Car Thumbnails Section */}
-      <section></section>
+      <section className='w-full'>
+         <ImageSlider
+            images={car.pictures}
+            alt="Premium car interior and exterior views"
+            title="Premium Car Image Gallery"
+            description="High-quality images showcasing vehicle interior and exterior details"
+          />
+      </section>
       {/* Car Highlight Section */}
       <section className='flex flex-col items-center gap-4 mt-4'>
         <h2 className='font-semibold text-base lg:text-xl'>Vechile Highlight</h2>
@@ -43,7 +51,7 @@ const CarDetails = ({ car }: { car: Car }) => {
         </div>
       </section>
       {/* Car Description Section */}
-      <section className='flex flex-col items-start gap-4 mt-4 w-full'>
+      <section className='flex flex-col items-start gap-4 mt-4 w-full px-8'>
       <h2 className='font-semibold text-base lg:text-xl'>Car Description</h2>
        <p 
           className={`text-base font-sans text-foreground ${
