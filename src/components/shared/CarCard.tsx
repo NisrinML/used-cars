@@ -40,12 +40,12 @@ const CarCard = ({ car ,onClick}: CarCardProps ) => {
                 <h4 className='text-title text-sm md:whitespace-nowrap'>{car?.title}</h4>
                 <h2 className='text-foreground text-sm lg:text-base '>{car?.make}{" "}/{" "}{car?.model}</h2>
                 <div className='flex flex-row  text-foreground gap-2 lg:gap-4 text-sm lg:text-base font-semibold mt-2'>
-                    <div className='flex flex-row gap-2 '>
+                    <div className='flex flex-row justify-center gap-2 '>
                         <Icon name="Location" w={4} h={4} />
                         <h2 >{car?.city}</h2>
                     </div>
                     <span>|</span>
-                    <div className='flex flex-row gap-2 '>
+                    <div className='flex flex-row justify-center gap-2 '>
                         <Icon name="Date" w={4} h={4} />
                         <h2 >{car?.year}</h2>
                     </div>

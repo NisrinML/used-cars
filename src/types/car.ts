@@ -10,7 +10,8 @@ export interface Car {
   title: string;
   year: number;
   price: number;
-slideshow_picture:string
+  slideshow_picture:string;
+  seller_name:string;
   pictures: string[];
 
 }

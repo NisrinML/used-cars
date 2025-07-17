@@ -17,6 +17,7 @@ const config: Config = {
         cardBackground: "#FFFFFF",
         cardBorder: "#E9EFF3",
         slideImage:"#0000007a",
+        linkColor:"#2784FC"
       },
     },
   },
