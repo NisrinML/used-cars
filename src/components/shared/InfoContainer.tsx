@@ -1,7 +1,7 @@
 import React from 'react'
 interface InfoProps {
     label: string,
-    value:any
+    value:string | number
 }
 const InfoContainer = ({label,value}:InfoProps) => {
   return (
